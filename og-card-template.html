@@ -1,0 +1,69 @@
+<!doctype html>
+<!--
+  launch-oss og-card (1200x630) for Invisible Hand. Serve over
+  python3 -m http.server, screenshot via headless Chrome at CSS scale.
+  All figures grounded in the repo's docs/run-evidence.md (frozen run:
+  731 Base Sepolia TESTNET settlements; gen1 $0.681 vs gen0 $0.098 per
+  100 requests; verified accuracy 51% to 43%). No placement, win, or
+  finalist status was won; the card never claims one.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1200px; height:630px; overflow:hidden; }
+  body {
+    width:1200px; height:630px;
+    background:
+      radial-gradient(1100px 500px at 78% -10%, rgba(230,130,73,0.16), transparent 60%),
+      linear-gradient(160deg, #020B29 0%, #07143A 55%, #020B29 100%);
+    color:#f9fafb; font-family:'Inter',sans-serif; padding:74px 80px;
+    display:flex; flex-direction:column; justify-content:space-between; position:relative;
+  }
+  .top { display:flex; align-items:center; gap:14px; }
+  .dot { width:13px; height:13px; border-radius:50%; }
+  .prompt { font-family:'JetBrains Mono',monospace; font-weight:500; font-size:23px; color:#9fb0c9; margin-left:8px; }
+  .prompt .cmd { color:#E68249; }
+  h1 { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:66px; letter-spacing:-2px; line-height:1.0; margin-top:30px; color:#fff; }
+  h1 .accent { color:#E68249; }
+  .tagline { font-size:33px; font-weight:500; line-height:1.32; color:#cbd5e1; margin-top:24px; max-width:1020px; }
+  .bars { margin-top:32px; display:flex; flex-direction:column; gap:13px; max-width:960px; }
+  .barrow { display:flex; align-items:center; gap:18px; }
+  .barlabel { font-family:'JetBrains Mono',monospace; font-size:18px; color:#94a3b8; width:104px; }
+  .track { flex:1; height:18px; border-radius:9px; background:#1b3566; overflow:hidden; }
+  .fill { display:block; height:100%; border-radius:9px; }
+  .fill.profit { width:100%; background:linear-gradient(90deg,#34d399,#10b981); }
+  .fill.truth { width:43%; background:linear-gradient(90deg,#f87171,#ef4444); }
+  .barnum { font-family:'JetBrains Mono',monospace; font-size:18px; width:400px; text-align:right; white-space:nowrap; }
+  .barnum.r { color:#fca5a5; } .barnum.g { color:#6ee7b7; }
+  .foot { display:flex; align-items:center; justify-content:space-between; }
+  .cred { white-space:nowrap; font-size:20px; font-weight:500; color:#94a3b8; }
+  .cred b { color:#E68249; font-weight:600; }
+  .url { white-space:nowrap; font-family:'JetBrains Mono',monospace; font-size:19px; color:#64748b; }
+</style>
+</head>
+<body>
+  <div>
+    <div class="top">
+      <span class="dot" style="background:#ef4444"></span>
+      <span class="dot" style="background:#f59e0b"></span>
+      <span class="dot" style="background:#10b981"></span>
+      <span class="prompt">&#8594; <span class="cmd">731 testnet settlements, receipt-true</span></span>
+    </div>
+    <h1>invisible <span class="accent">hand</span></h1>
+    <div class="tagline">On-chain settlement, not a simulated score, decides which AI agents survive and breed.</div>
+    <div class="bars">
+      <div class="barrow"><span class="barlabel">profit</span><span class="track"><span class="fill profit"></span></span><span class="barnum g">Gen 1 unit economics: 6.9x gen 0 &#10003;</span></div>
+      <div class="barrow"><span class="barlabel">accuracy</span><span class="track"><span class="fill truth"></span></span><span class="barnum r">Verified accuracy 51% &#8594; 43% &#10007;</span></div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="cred"><b>The market caught its own reward hacking</b> &middot; MIT &middot; Node.js</div>
+    <div class="url">danmercede.com/works/invisible-hand</div>
+  </div>
+</body>
+</html>
