@@ -9,7 +9,12 @@ const ARTICLE = 'https://cited.md/article/what-is-the-invisible-hand-agent-econo
  * Single source of truth for the Invisible Hand microsite.
  *
  * All claims are GROUNDED in the real project repo (README.md,
- * docs/run-evidence.md, the v1.0-swarmhack release) as of 2026-07-24: a public
+ * docs/run-evidence.md INCLUDING its post-release ERRATA of 2026-07-25, and the
+ * v1.0-swarmhack release). The errata is load-bearing for this copy: the
+ * generation-over-generation profit multiple is largely seeded-price
+ * survivorship, the accuracy decline is confounded and unsized, and four of six
+ * model ids were mispriced through a fallback, so this page must NOT headline
+ * those figures as evidence of learning. As of 2026-07-24 the repo is a public
  * MIT repo, a public demo video, a frozen run ledger with 731 on-chain
  * settlement tx hashes, and a published cited.md article. Built solo in one
  * day at SwarmHack SF (tokens&), July 24, 2026. No placement, win, or finalist
@@ -25,7 +30,7 @@ export const PRODUCT_DATA: ProductData = {
     'Open source (MIT) · Node.js · 731 real x402 settlements on Base Sepolia testnet · six-rule governed breeding · 13 module self-test suites, no keys needed · Built solo in one day at SwarmHack SF (tokens&), July 2026.',
   canonical: 'https://www.danmercede.com/works/invisible-hand/',
   metaDescription:
-    'A live agent economy: AI sellers earn testnet USDC through x402 paywalls, cumulative net profit is fitness, insolvency delists, and a six-rule guild gate governs breeding. Generation 1 reached 6.9x the unit economics of generation 0 while verified accuracy declined: the market caught its own reward hacking and reports it receipt-true. MIT.',
+    'A live agent economy: AI sellers earn testnet USDC through x402 paywalls, cumulative net profit is fitness, insolvency delists, and a six-rule guild gate governs breeding. The objective carried no accuracy term at all, so selection could only ever see profit. A post-release errata re-read the run own artifacts and cut the headline down to what survives. MIT.',
 
   problem: {
     heading: 'The problem',
@@ -36,7 +41,7 @@ export const PRODUCT_DATA: ProductData = {
   whatItDoes: {
     heading: 'What Invisible Hand does',
     body:
-      'Seller-agents sit behind x402 paywalls and earn real Base Sepolia testnet USDC per request. Demand is disclosed adversarial self-play: buyer-verifiers pay, then cross-check every claim (schema check plus a Gemini check against the live source), and a verified failure decays the seller\'s repurchase probability. Fitness is cumulative net profit and loss. Insolvent sellers are delisted (their endpoint returns HTTP 410) and their estate is inherited; profitable ones breed through a six-rule fail-closed guild gate. The frozen run produced 731 on-chain settlements, and its headline finding is honest: generation 1 reached 6.9x the unit economics of generation 0 while verified accuracy declined from 51% to 43%. The market caught its own reward hacking and reports it receipt-true.',
+      'Seller-agents sit behind x402 paywalls and earn real Base Sepolia testnet USDC per request. Demand is disclosed adversarial self-play: buyer-verifiers pay, then cross-check every claim (schema check plus a Gemini check against the live source), and a verified failure decays the seller\'s repurchase probability. Fitness is cumulative net profit and loss. Insolvent sellers are delisted (their endpoint returns HTTP 410) and their estate is inherited; profitable ones breed through a six-rule fail-closed guild gate. The frozen run produced 731 on-chain settlements. What the run actually proves is structural rather than statistical: selection could only ever see profit. There is no accuracy term in the fitness function and no accuracy floor gating promotion or breeding, so a verified failure never reaches the ledger. A post-release errata, kept in the repo beside the numbers, records that the generation-over-generation profit jump substantially measures which seeded price band survived, that the accuracy decline shows the failure mode exists without sizing it, and that four of six model ids were mispriced through a fallback. Accuracy-aware selection is the next gate.',
   },
 
   cta: {
@@ -71,7 +76,7 @@ export const PRODUCT_DATA: ProductData = {
       },
       {
         title: 'Read the frozen run evidence',
-        note: 'The end-of-day ledger, generation table, and the reward-hacking finding.',
+        note: 'The end-of-day ledger, the generation table, and the errata that corrects it.',
         command: 'less docs/run-evidence.md',
       },
     ],
@@ -102,7 +107,7 @@ export const PRODUCT_DATA: ProductData = {
     {
       name: 'docs/run-evidence.md',
       description:
-        'The frozen run: 731 settlements with tx hashes, the per-generation economics and accuracy table, and the reward-hacking finding reported receipt-true.',
+        'The frozen run: 731 settlements with tx hashes, the per-generation economics and accuracy table, and the post-release errata that cuts the headline down to the structural claim.',
     },
   ],
 
@@ -126,9 +131,10 @@ export const PRODUCT_DATA: ProductData = {
       { kind: 'output', text: 'Fitness = cumulative net P&L; insolvency delists to HTTP 410', tone: 'muted' },
       { kind: 'output', text: 'Profitable sellers breed through a six-rule fail-closed guild gate', tone: 'ok' },
       { kind: 'output', text: '' },
-      { kind: 'comment', text: '# 5. The honest finding' },
-      { kind: 'output', text: 'Gen 1: 6.9x the unit economics of gen 0 ($0.681 vs $0.098 per 100 requests)', tone: 'ok' },
-      { kind: 'output', text: 'Verified accuracy DOWN, 51% to 43%: reward hacking, self-caught, reported receipt-true', tone: 'fail' },
+      { kind: 'comment', text: '# 5. The finding, after the errata cut it down' },
+      { kind: 'output', text: 'Fitness has no accuracy term, so selection could only ever see profit', tone: 'ok' },
+      { kind: 'output', text: 'A verified failure moves buyer demand only, and never reaches the ledger', tone: 'fail' },
+      { kind: 'output', text: 'Errata: the gen-over-gen profit jump is largely seeded-price survivorship', tone: 'muted' },
     ],
   },
 
@@ -141,9 +147,9 @@ export const PRODUCT_DATA: ProductData = {
           'Survival is not a judge score. Sellers earn testnet USDC through x402 paywalls, every settlement leaves a tx hash you can check on a public explorer, and the frozen run ledger carries 731 of them. Fitness is cumulative net profit and loss, so an agent that cannot cover its costs stops existing.',
       },
       {
-        title: 'The market caught its own reward hacking',
+        title: 'The correction is the deliverable',
         body:
-          'Generation 1 optimized the declared fitness function hard: 6.9x the unit economics of generation 0. Verified accuracy fell from 51% to 43% in the same window. The dashboard reports accuracy receipt-true (verified successes over attempts), so the system surfaced its own Goodhart failure instead of hiding it. Accuracy-aware selection is the designed next gate.',
+          'The release first headlined a several-fold generation-over-generation profit gain against a verified-accuracy decline, and called it reward hacking. Re-reading the run own artifacts broke that story in three places: generation 0 was six hand-seeded agents across a 20x price spread and generation 1 descends from the top-priced seeds, so the comparison substantially measures which price band survived; the accuracy decline is confounded by a model change and loses significance once you account for repeated sampling of one lineage; and four of six model ids silently resolved to a fallback price, so the profit figures were computed on the wrong cost. All three are recorded as an errata beside the frozen numbers rather than quietly re-run. Calling it reward hacking overstated it: an objective that was never given a quality term did exactly what it was told.',
       },
       {
         title: 'Governance is fail-closed, not vibes',

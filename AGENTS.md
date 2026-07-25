@@ -14,9 +14,13 @@ metadata, static assets, and cache config for the site surface.
 - Keep product claims grounded in the source project README,
   docs/run-evidence.md, and verified behavior. All settlement figures are Base
   Sepolia TESTNET USDC and must be labeled testnet wherever quoted. The frozen
-  run numbers (731 settlements; gen1 $0.681 vs gen0 $0.098 per 100 requests;
-  accuracy 51% to 43%) come from docs/run-evidence.md; do not restate them
-  without that grounding. No placement, win, or finalist status was won;
+  run numbers come from docs/run-evidence.md, which carries a post-release
+  ERRATA (2026-07-25) that is binding on this copy: the generation-over-
+  generation profit multiple is largely seeded-price survivorship computed on a
+  fallback price, the accuracy decline is confounded and unsized, and calling
+  the result reward hacking overstates it. Do NOT headline those figures as
+  evidence of learning; the claim that survives is structural (fitness carries
+  no accuracy term, so selection could only ever see profit). No placement, win, or finalist status was won;
   never state one. No em or en dashes in any public-facing copy.
 
 ## Authority Order

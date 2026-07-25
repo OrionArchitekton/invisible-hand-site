@@ -2,10 +2,13 @@
 <!--
   launch-oss og-card (1200x630) for Invisible Hand. Serve over
   python3 -m http.server, screenshot via headless Chrome at CSS scale.
-  All figures grounded in the repo's docs/run-evidence.md (frozen run:
-  731 Base Sepolia TESTNET settlements; gen1 $0.681 vs gen0 $0.098 per
-  100 requests; verified accuracy 51% to 43%). No placement, win, or
-  finalist status was won; the card never claims one.
+  Grounded in docs/run-evidence.md INCLUDING its 2026-07-25 errata. The
+  card deliberately does NOT headline the generation-over-generation
+  profit multiple or the accuracy delta: the errata shows the first is
+  largely seeded-price survivorship computed on a fallback price, and the
+  second is confounded and unsized. Only the settlement count (731, Base
+  Sepolia TESTNET) and the structural claim are asserted. No placement,
+  win, or finalist status was won; the card never claims one.
 -->
 <html lang="en">
 <head>
@@ -33,7 +36,7 @@
   .tagline { font-size:33px; font-weight:500; line-height:1.32; color:#cbd5e1; margin-top:24px; max-width:1020px; }
   .bars { margin-top:32px; display:flex; flex-direction:column; gap:13px; max-width:960px; }
   .barrow { display:flex; align-items:center; gap:18px; }
-  .barlabel { font-family:'JetBrains Mono',monospace; font-size:18px; color:#94a3b8; width:104px; }
+  .barlabel { font-family:'JetBrains Mono',monospace; font-size:17px; color:#94a3b8; width:168px; white-space:nowrap; }
   .track { flex:1; height:18px; border-radius:9px; background:#1b3566; overflow:hidden; }
   .fill { display:block; height:100%; border-radius:9px; }
   .fill.profit { width:100%; background:linear-gradient(90deg,#34d399,#10b981); }
@@ -57,12 +60,12 @@
     <h1>invisible <span class="accent">hand</span></h1>
     <div class="tagline">On-chain settlement, not a simulated score, decides which AI agents survive and breed.</div>
     <div class="bars">
-      <div class="barrow"><span class="barlabel">profit</span><span class="track"><span class="fill profit"></span></span><span class="barnum g">Gen 1 unit economics: 6.9x gen 0 &#10003;</span></div>
-      <div class="barrow"><span class="barlabel">accuracy</span><span class="track"><span class="fill truth"></span></span><span class="barnum r">Verified accuracy 51% &#8594; 43% &#10007;</span></div>
+      <div class="barrow"><span class="barlabel">what it saw</span><span class="track"><span class="fill profit"></span></span><span class="barnum g">Profit: the entire fitness function &#10003;</span></div>
+      <div class="barrow"><span class="barlabel">what it missed</span><span class="track"><span class="fill truth"></span></span><span class="barnum r">Accuracy: no term, no floor, no gate &#10007;</span></div>
     </div>
   </div>
   <div class="foot">
-    <div class="cred"><b>The market caught its own reward hacking</b> &middot; MIT &middot; Node.js</div>
+    <div class="cred"><b>Shipped with the errata that corrects it</b> &middot; MIT &middot; Node.js</div>
     <div class="url">danmercede.com/works/invisible-hand</div>
   </div>
 </body>
